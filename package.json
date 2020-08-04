@@ -4,13 +4,12 @@
   "description": "example reverse proxy using http proxy middleware without nginx",
   "main": "app.js",
   "scripts": {
-    "proxy": "nodemon -e js proxy.js",
-    "start": "nodemon -e js app.js"
+    "start": "nodemon -e js server.js"
   },
   "author": "restuwahyu13",
   "license": "MIT",
   "keywords": [
-  	 "reverse-proxy",
+    "reverse-proxy",
     "express",
     "node",
     "express-proxy",
@@ -19,6 +18,7 @@
   "dependencies": {
     "axios": "^0.19.2",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.5"
   },
