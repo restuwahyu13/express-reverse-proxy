@@ -6,7 +6,10 @@ server.use(
   createProxyMiddleware({
     target: 'http://localhost:1945',
     changeOrigin: true,
-    xfwd: true
+    xfwd: true,
+    pathRewrite: {
+      '/': '/api/'
+    }
   })
 )
 

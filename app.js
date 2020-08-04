@@ -11,6 +11,11 @@ app.use(logger('dev'))
 app.enable('trust proxy')
 app.disable('x-powered-by')
 
+/**
+ * @description original request url http://localhost:1945/api/v2/users
+ * @description proxy request url http://localhost:3000/v2/users
+ */
+
 app.get('/api/v2/users', async (req, res) => {
   const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
   res.json(data)
