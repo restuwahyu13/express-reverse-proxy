@@ -5,11 +5,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 server.use(
   createProxyMiddleware({
     target: 'http://localhost:1945',
+    pathRewrite: { '/': '/api/' },
     changeOrigin: true,
-    xfwd: true,
-    pathRewrite: {
-      '/': '/api/'
-    }
+    xfwd: true
   })
 )
 
